@@ -1,0 +1,15 @@
+// Goal Routes
+const express = require('express');
+const router = express.Router();
+const goalController = require('../controllers/goalController');
+const authMiddleware = require('../middleware/auth');
+
+router.use(authMiddleware);
+
+router.get('/', goalController.getGoals);
+router.post('/', goalController.createGoal);
+router.put('/:id', goalController.updateGoal);
+router.post('/:id/contribute', goalController.contributeToGoal);
+router.delete('/:id', goalController.deleteGoal);
+
+module.exports = router;

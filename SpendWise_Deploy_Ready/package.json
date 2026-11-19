@@ -1,0 +1,24 @@
+{
+  "name": "spendwise",
+  "version": "1.0.0",
+  "description": "SpendWise - Personal Finance Management Web Application",
+  "scripts": {
+    "start": "cd backend && node server.js",
+    "backend": "cd backend && npm run dev",
+    "frontend": "cd frontend && npm run dev",
+    "build": "cd frontend && npm run build",
+    "share:pinggy": "ssh -p 443 -R0:localhost:5000 a.pinggy.io",
+    "share:cloudflare": "npx untun@latest tunnel --port 5000",
+    "test:backend": "cd backend && node test-backend.js"
+  },
+  "keywords": [
+    "finance",
+    "budget",
+    "tracker",
+    "react",
+    "express",
+    "mongodb"
+  ],
+  "author": "",
+  "license": "ISC"
+}
