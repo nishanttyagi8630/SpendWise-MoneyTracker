@@ -8,6 +8,12 @@ const { getIsConnected } = require('../config/db');
 
 const dataFilePath = path.join(__dirname, '..', 'data', 'local_db.json');
 
+// Ensure the data directory exists
+const dataDir = path.dirname(dataFilePath);
+if (!fs.existsSync(dataDir)) {
+    fs.mkdirSync(dataDir, { recursive: true });
+}
+
 // Initialize local database file if it does not exist
 const initLocalDB = () => {
   if (!fs.existsSync(dataFilePath)) {
