@@ -1,0 +1,8 @@
+node_modules/
+**/node_modules/
+**/venv/
+**/.env
+**/dist/
+backend/data/local_db.json
+backend/*.log
+.DS_Store
